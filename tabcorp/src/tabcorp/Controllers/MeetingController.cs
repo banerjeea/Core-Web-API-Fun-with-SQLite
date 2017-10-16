@@ -17,6 +17,7 @@ namespace tabcorp.Controllers
         [HttpPost("Meetings")]
         public void Meetings([FromBody] Meetings input)
         {
+            var test = input;
         }
 
         [HttpGet("Health")]
