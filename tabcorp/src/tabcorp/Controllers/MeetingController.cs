@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using tabcorp.Models.Meeting;
 
 namespace tabcorp.Controllers
@@ -19,12 +20,22 @@ namespace tabcorp.Controllers
             MeetingRepository = meetingRepository;
         }
        
-        // POST api/values
         [HttpPost("Meetings")]
-        public void Meetings([FromBody] RootMeeting input)
+        public async Task<IActionResult> Meetings([FromBody] RootMeeting input)
         {
-            var test = input;
-            MeetingRepository.AddMeetings(input);
+            if (input == null) return BadRequest();
+            try
+            {
+                await MeetingRepository.AddMeetings(input);
+                return Ok();
+
+            }
+
+            catch (HttpRequestException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
 
         [HttpGet("Health")]

@@ -21,15 +21,14 @@ namespace tabcorp.Models.Meeting
 
         }
 
-        public string AddMeetings(RootMeeting meeting)
+        public async Task AddMeetings(RootMeeting meeting)
         {
             try
             {
                 Meetings.Add(meeting.meeting);
 
-                SaveChanges();
+                await SaveChangesAsync();
 
-                return DataAddedSuccessfully;
 
             }
             catch (Exception ex)
