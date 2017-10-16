@@ -1,5 +1,6 @@
 
 
+
 # Tabcorp
 ## Ingredients used:
 .Net Core SDK 1.0.0 preview2
@@ -18,7 +19,7 @@ For persistent memory storage, SQLite was selected given its ease of use and lig
 In a real world scenario, I would follow ‘Git Flow’ model and develop on feature branches with pull requests to develop branch; but given the nature of this exercise, I have continuously developed on a single branch. 
 
 ## Example Reqest to API
-### Endpoint: http://localhost:2497/api/meetings
+### POST Endpoint: http://localhost:2497/api/meetings
 ### Request Body:
 {
 "meeting": {
@@ -52,5 +53,24 @@ In a real world scenario, I would follow ‘Git Flow’ model and develop on fea
 
 ### Expected Response:
 HttpStatusCode : 200
+
 "Data successfully added"
 
+### GET Endpoint: http://localhost:2497/api/health
+### Expected Response when Up :
+{
+    "version": {
+        "major": 1,
+        "minor": 1,
+        "build": -1,
+        "revision": -1,
+        "majorRevision": -1,
+        "minorRevision": -1
+    },
+    "content": null,
+    "statusCode": 200,
+    "reasonPhrase": "OK",
+    "headers": [],
+    "requestMessage": null,
+    "isSuccessStatusCode": true
+}
