@@ -20,7 +20,7 @@ namespace tabcorp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Date");
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("Name");
 
@@ -36,7 +36,7 @@ namespace tabcorp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Endtime");
+                    b.Property<DateTime>("Endtime");
 
                     b.Property<int?>("MeetingId");
 

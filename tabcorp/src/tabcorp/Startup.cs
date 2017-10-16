@@ -43,7 +43,7 @@ namespace tabcorp
 
             services.AddSingleton<IMeetingRepository, MeetingRepository>();
 
-            services.AddDbContext<MeetingRepository>(options => options.UseSqlite("Data Source=meetings.db"));
+            services.AddDbContext<MeetingRepository>(options => options.UseSqlite("Data Source=racemeeting.db"));
 
         }
 

@@ -16,7 +16,7 @@ namespace tabcorp.Models.Meeting
         public int Id { get; set; }
         public string Name { get; set; }
         public string State { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public List<Race> Races { get; set; }
     }
 
@@ -26,7 +26,7 @@ namespace tabcorp.Models.Meeting
         public int Racenumber { get; set; }
         public string Racename { get; set; }
         public string Starttime { get; set; }
-        public string Endtime { get; set; }
+        public DateTime Endtime { get; set; }
     }
 
 }

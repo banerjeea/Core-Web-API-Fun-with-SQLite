@@ -8,6 +8,7 @@ namespace tabcorp.Models.Meeting
 {
     public class MeetingRepository : DbContext, IMeetingRepository
     {
+        private const string DataAddedSuccessfully = "Data Added";
         public MeetingRepository(DbContextOptions<MeetingRepository> options)
             : base(options)
         { }
@@ -22,10 +23,19 @@ namespace tabcorp.Models.Meeting
 
         public string AddMeetings(RootMeeting meeting)
         {
-            Meetings.Add(meeting.meeting);
+            try
+            {
+                Meetings.Add(meeting.meeting);
 
-          var count =  SaveChanges();
-          return count.ToString();
+                SaveChanges();
+
+                return DataAddedSuccessfully;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace tabcorp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Autoincrement", true),
-                    Date = table.Column<string>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     State = table.Column<string>(nullable: true)
                 },
@@ -29,7 +29,7 @@ namespace tabcorp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Autoincrement", true),
-                    Endtime = table.Column<string>(nullable: true),
+                    Endtime = table.Column<DateTime>(nullable: false),
                     MeetingId = table.Column<int>(nullable: true),
                     Racename = table.Column<string>(nullable: true),
                     Racenumber = table.Column<int>(nullable: false),

@@ -8,7 +8,7 @@ using tabcorp.Models.Meeting;
 namespace tabcorp.Migrations
 {
     [DbContext(typeof(MeetingRepository))]
-    [Migration("20171016022709_InitialCreate")]
+    [Migration("20171016024747_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace tabcorp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Date");
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("Name");
 
@@ -37,7 +37,7 @@ namespace tabcorp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Endtime");
+                    b.Property<DateTime>("Endtime");
 
                     b.Property<int?>("MeetingId");
 
