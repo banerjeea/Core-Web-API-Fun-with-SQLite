@@ -1,8 +1,11 @@
 # Tabcorp
 ## Ingredients used:
 .Net Core SDK 1.0.0 preview2
+
 Microsoft.EntityFrameworkCore.Sqlite 1.0.0
+
 Microsoft.EntityFrameworkCore.Tools 1.0.0-preview2-final
+
 Microsoft.EntityFrameworkCore.Design 1.0.0-preview2-final
 
 ## Design:
