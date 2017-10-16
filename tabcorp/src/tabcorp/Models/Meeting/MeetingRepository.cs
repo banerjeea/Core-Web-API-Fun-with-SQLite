@@ -12,20 +12,17 @@ namespace tabcorp.Models.Meeting
             : base(options)
         { }
 
-        public DbSet<Meetings> Meetings { get; set; }
+        public DbSet<Meeting> Meetings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Meetings>().HasKey(k => k.meeting.Id);
+            builder.Entity<Meeting>().HasKey(k => k.Id);
 
         }
 
-        public string AddMeetings(Meetings meeting)
+        public string AddMeetings(RootMeeting meeting)
         {
-            Meetings.Add(new Meetings
-            {
-                meeting = meeting.meeting
-            });
+            Meetings.Add(meeting.meeting);
 
           var count =  SaveChanges();
           return count.ToString();

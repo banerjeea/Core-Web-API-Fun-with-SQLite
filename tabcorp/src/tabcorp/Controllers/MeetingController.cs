@@ -21,7 +21,7 @@ namespace tabcorp.Controllers
        
         // POST api/values
         [HttpPost("Meetings")]
-        public void Meetings([FromBody] Meetings input)
+        public void Meetings([FromBody] RootMeeting input)
         {
             var test = input;
             MeetingRepository.AddMeetings(input);

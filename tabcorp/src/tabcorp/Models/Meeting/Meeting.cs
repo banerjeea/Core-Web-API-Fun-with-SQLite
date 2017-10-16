@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
 
 namespace tabcorp.Models.Meeting
 {
-    public class Meetings
+    public class RootMeeting
     {
         public Meeting meeting { get; set; }
     }
@@ -28,5 +29,4 @@ namespace tabcorp.Models.Meeting
         public string Endtime { get; set; }
     }
 
-
- }
+}
