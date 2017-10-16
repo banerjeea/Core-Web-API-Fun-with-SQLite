@@ -200,9 +200,9 @@
 C:\Projects\tabcorp\tabcorp\src\tabcorp\Program.cs
 C:\Projects\tabcorp\tabcorp\src\tabcorp\Startup.cs
 C:\Projects\tabcorp\tabcorp\src\tabcorp\Controllers\MeetingController.cs
-C:\Projects\tabcorp\tabcorp\src\tabcorp\Migrations\20171016024747_InitialCreate.cs
-C:\Projects\tabcorp\tabcorp\src\tabcorp\Migrations\20171016024747_InitialCreate.Designer.cs
+C:\Projects\tabcorp\tabcorp\src\tabcorp\Migrations\20171016040943_newmodel.cs
+C:\Projects\tabcorp\tabcorp\src\tabcorp\Migrations\20171016040943_newmodel.Designer.cs
 C:\Projects\tabcorp\tabcorp\src\tabcorp\Migrations\MeetingRepositoryModelSnapshot.cs
-C:\Projects\tabcorp\tabcorp\src\tabcorp\Models\Meeting\IMeetingRepository.cs
 C:\Projects\tabcorp\tabcorp\src\tabcorp\Models\Meeting\Meeting.cs
-C:\Projects\tabcorp\tabcorp\src\tabcorp\Models\Meeting\MeetingRepository.cs
+C:\Projects\tabcorp\tabcorp\src\tabcorp\Repository\Meeting\IMeetingRepository.cs
+C:\Projects\tabcorp\tabcorp\src\tabcorp\Repository\Meeting\MeetingRepository.cs

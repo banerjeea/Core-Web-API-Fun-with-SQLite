@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace tabcorp.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class newmodel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,7 +33,7 @@ namespace tabcorp.Migrations
                     MeetingId = table.Column<int>(nullable: true),
                     Racename = table.Column<string>(nullable: true),
                     Racenumber = table.Column<int>(nullable: false),
-                    Starttime = table.Column<string>(nullable: true)
+                    Starttime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

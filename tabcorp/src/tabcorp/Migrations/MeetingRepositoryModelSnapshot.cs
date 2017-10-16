@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using tabcorp.Models.Meeting;
+using tabcorp.Repository.Meeting;
 
 namespace tabcorp.Migrations
 {
@@ -44,7 +45,7 @@ namespace tabcorp.Migrations
 
                     b.Property<int>("Racenumber");
 
-                    b.Property<string>("Starttime");
+                    b.Property<DateTime>("Starttime");
 
                     b.HasKey("Id");
 

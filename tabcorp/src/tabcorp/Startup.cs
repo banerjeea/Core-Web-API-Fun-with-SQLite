@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using tabcorp.Models.Meeting;
+using tabcorp.Repository.Meeting;
 
 namespace tabcorp
 {
@@ -37,7 +38,6 @@ namespace tabcorp
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            //services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
 
@@ -53,9 +53,6 @@ namespace tabcorp
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-           // app.UseApplicationInsightsRequestTelemetry();
-
-          //  app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
         }

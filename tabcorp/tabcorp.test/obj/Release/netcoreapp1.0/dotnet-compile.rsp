@@ -1,12 +1,12 @@
---temp-output:C:\Projects\tabcorp\tabcorp\tabcorp.test\obj\Debug\netcoreapp1.0\
---out:C:\Projects\tabcorp\tabcorp\tabcorp.test\bin\Debug\netcoreapp1.0\tabcorp.test.dll
---define:DEBUG
+--temp-output:C:\Projects\tabcorp\tabcorp\tabcorp.test\obj\Release\netcoreapp1.0\
+--out:C:\Projects\tabcorp\tabcorp\tabcorp.test\bin\Release\netcoreapp1.0\tabcorp.test.dll
+--define:RELEASE
 --define:TRACE
 --define:NETCOREAPP1_0
 --suppress-warning:CS1701
 --suppress-warning:CS1702
 --suppress-warning:CS1705
---optimize:False
+--optimize:True
 --output-name:tabcorp.test
 --file-version:1.0.0.0
 --version:1.0.0.0
@@ -213,7 +213,7 @@
 --reference:C:\Users\Avishek\.nuget\packages\xunit.extensibility.execution\2.2.0-beta2-build3300\lib\netstandard1.0\xunit.execution.dotnet.dll
 --reference:C:\Users\Avishek\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.reporters.dotnet.dll
 --reference:C:\Users\Avishek\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll
---reference:C:\Projects\tabcorp\tabcorp\src\tabcorp\bin\Debug\netcoreapp1.0\tabcorp.dll
+--reference:C:\Projects\tabcorp\tabcorp\src\tabcorp\bin\Release\netcoreapp1.0\tabcorp.dll
 C:\Projects\tabcorp\tabcorp\tabcorp.test\TestMeetingController.cs
 C:\Projects\tabcorp\tabcorp\tabcorp.test\TestMeetingRepository.cs
 C:\Projects\tabcorp\tabcorp\tabcorp.test\Properties\AssemblyInfo.cs

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using tabcorp.Models.Meeting;
+using tabcorp.Repository.Meeting;
 
 namespace tabcorp.Controllers
 {
@@ -23,12 +20,12 @@ namespace tabcorp.Controllers
         [HttpPost("Meetings")]
         public async Task<IActionResult> Meetings([FromBody] RootMeeting input)
         {
-            if (input == null) return BadRequest();
+            if (input == null || !ModelState.IsValid) return BadRequest();
             try
             {
-                await MeetingRepository.AddMeetings(input);
-                return Ok();
-
+                if (await MeetingRepository.AddMeetings(input)) 
+                    return Json("Data successfully added");
+                return StatusCode(500);
             }
 
             catch (HttpRequestException ex)

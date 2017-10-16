@@ -4,12 +4,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using tabcorp.Models.Meeting;
+using tabcorp.Repository.Meeting;
 
 namespace tabcorp.Migrations
 {
     [DbContext(typeof(MeetingRepository))]
-    [Migration("20171016024747_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20171016040943_newmodel")]
+    partial class newmodel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,7 +46,7 @@ namespace tabcorp.Migrations
 
                     b.Property<int>("Racenumber");
 
-                    b.Property<string>("Starttime");
+                    b.Property<DateTime>("Starttime");
 
                     b.HasKey("Id");
 

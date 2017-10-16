@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using tabcorp.Models.Meeting;
 
-namespace tabcorp.Models.Meeting
+namespace tabcorp.Repository.Meeting
 {
     public class MeetingRepository : DbContext, IMeetingRepository
     {
@@ -13,28 +12,31 @@ namespace tabcorp.Models.Meeting
             : base(options)
         { }
 
-        public DbSet<Meeting> Meetings { get; set; }
+        public DbSet<Models.Meeting.Meeting> Meetings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Meeting>().HasKey(k => k.Id);
+            builder.Entity<Models.Meeting.Meeting>().HasKey(k => k.Id);
 
         }
 
-        public async Task AddMeetings(RootMeeting meeting)
+        public async Task<bool> AddMeetings(RootMeeting meeting)
         {
             try
             {
                 Meetings.Add(meeting.meeting);
 
-                await SaveChangesAsync();
+               var count =  await SaveChangesAsync();
 
-
+                if (count > 0)
+                    return true;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
+            return false;
         }
     }
 }
