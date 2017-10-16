@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace tabcorp.Models.Meeting
 {
@@ -11,20 +12,20 @@ namespace tabcorp.Models.Meeting
     }
     public class Meeting
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string state { get; set; }
-        public string date { get; set; }
-        public List<Race> races { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string State { get; set; }
+        public string Date { get; set; }
+        public List<Race> Races { get; set; }
     }
 
     public class Race
     {
-        public int id { get; set; }
-        public int racenumber { get; set; }
-        public string racename { get; set; }
-        public string starttime { get; set; }
-        public string endtime { get; set; }
+        public int Id { get; set; }
+        public int Racenumber { get; set; }
+        public string Racename { get; set; }
+        public string Starttime { get; set; }
+        public string Endtime { get; set; }
     }
 
 

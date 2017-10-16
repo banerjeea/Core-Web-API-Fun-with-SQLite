@@ -7,6 +7,6 @@ namespace tabcorp.Models.Meeting
 {
     public interface IMeetingRepository
     {
-
+        string AddMeetings(Meetings meeting);
     }
 }

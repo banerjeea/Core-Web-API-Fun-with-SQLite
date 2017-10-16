@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -40,8 +41,10 @@ namespace tabcorp
 
             services.AddMvc();
 
-            //Dependency Injection. We don't directly call repo classes from controllers.
             services.AddSingleton<IMeetingRepository, MeetingRepository>();
+
+            services.AddDbContext<MeetingRepository>(options => options.UseSqlite("Data Source=meetings.db"));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

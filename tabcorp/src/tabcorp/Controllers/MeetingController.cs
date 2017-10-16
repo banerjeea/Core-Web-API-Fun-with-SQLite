@@ -12,12 +12,19 @@ namespace tabcorp.Controllers
     [Route("api")]
     public class MeetingController : Controller
     {
+        public IMeetingRepository MeetingRepository;
+
+        public MeetingController(IMeetingRepository meetingRepository)
+        {
+            MeetingRepository = meetingRepository;
+        }
        
         // POST api/values
         [HttpPost("Meetings")]
         public void Meetings([FromBody] Meetings input)
         {
             var test = input;
+            MeetingRepository.AddMeetings(input);
         }
 
         [HttpGet("Health")]
