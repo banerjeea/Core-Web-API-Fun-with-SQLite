@@ -1,7 +1,7 @@
 
 
 
-# Tabcorp
+# A .Net Core Web API app just for fun
 ## Ingredients used:
 .Net Core SDK 1.0.0 preview2
 
